@@ -12,8 +12,6 @@ function encrypt(e) {
     if (e.target === button) {
         let inputMsgValue = inputMsg.value;
         let inputKeyValue = Number(inputKey.value);
-        console.log(inputMsgValue);
-        console.log(inputKeyValue);
         let encryptedArr = [];
         for (let i = 0; i < inputMsgValue.length; i++) {
             let symbolMsg = inputMsgValue[i];
@@ -23,7 +21,9 @@ function encrypt(e) {
             encryptedArr.push(newSimbolArr);
         }
         let encryptedMsg = encryptedArr.join('');
-        console.log(encryptedMsg);
+        let encryptedTextPara = document.createElement('p');
+        document.body.appendChild(encryptedTextPara);
+        encryptedTextPara.textContent = encryptedMsg
     }
 
 

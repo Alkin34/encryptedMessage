@@ -1,0 +1,7 @@
+.container {
+    display: flex;
+}
+
+.btn {
+    height: 20px;
+}
